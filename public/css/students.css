@@ -1,0 +1,32 @@
+
+table.table.table-striped.thongtinsv{
+    margin: 10px 0px;
+}
+
+.table  tr {
+    height: 40px;
+    border-radius: 25px;
+    padding: 5px;
+    border: 1px solid white;
+   
+    
+}
+
+.table  tr td {
+    height: 30px;
+    padding: 5px;
+}
+table.table.table-bordered-thongtinluanvan tr {
+    border-top: 1px solid white;
+}
+table.table.table-bordered-thongtinluanvan tr td.div_td{
+    border: 1px solid white;
+}
+
+
+/* style="border: 1px solid white;"  */
+tbody, td, tfoot, th, thead, tr {
+    border: 0 solid ;
+    border-color: inherit;
+    padding-left: 10px;
+}

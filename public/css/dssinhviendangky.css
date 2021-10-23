@@ -1,0 +1,25 @@
+.container.danhsachsinhviendangky{
+    
+    padding-right: 30px;
+    margin-bottom: 30px;
+   
+
+}
+table.table-hover.table-danhsachsinhvien-detai tr td{
+    padding:4px;
+    margin-top: 10px;
+    border: 1px solid black;
+    
+}
+table.table-hover.table-danhsachsinhvien-detai tr:hover {
+    background-color: #d4e7dc;
+    
+}
+table.table-hover.table-danhsachsinhvien-detai tr td.tensv {
+    width: 200px;
+        
+}
+table.table-hover.table-danhsachsinhvien-detai tr td.mssv {
+    width: 130px;
+        
+}

@@ -1,0 +1,110 @@
+
+
+img{ max-width:70%;}
+/*end reset*/
+body{
+/* background: url(../images/banner1.jpg)no-repeat;   */
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 100%;
+
+}  
+
+/*--header start here--*/
+.header-main {
+  padding: 50px 0px 50px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  background-color: rgb(239, 239, 250);
+  /* padding-left: 10px; */
+  border-radius: 20px  ;
+}
+
+.header-main h1 {
+    font-size: 64px;
+    color: black;
+    text-align: center;
+    padding-bottom: 0.8em;
+    margin-bottom: 10px;
+}
+
+.header-left-bottom {
+    padding: 40px;
+}
+
+.header-left-bottom form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* .header-left-bottom input[type="text"] {
+    background: url(../images/icon-user.png)no-repeat 0px 5px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    padding: 12px 13px 20px 44px;
+	border:none;
+    border-bottom:1px solid black;
+    width: 87%;
+    margin: 0 20px 20px 20px;
+    display: inline-block;
+}
+.header-left-bottom input[type="password"]{
+   background: url(../images/icon-pw.png)no-repeat 0px 10px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+  border:none;
+  border-bottom:1px solid black;
+  padding: 12px 13px 20px 50px;
+  width: 87%;
+  margin: 0 30px 50px 20px;
+  display: inline-block;
+} */
+
+.header-left-bottom input[type="submit"] {
+    background: #04AA6D;
+    color: #FFF;
+    font-size: 21px;
+    padding: 0.1em 0.5em;
+    /* margin: 0 30px 50px 20px; */
+    /* margin-top: 20px; */
+    width: 50%;
+    font-weight: 500;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.menudangnhap{
+    height: 50px;
+    background-color:#f1f1f1;
+    /* margin-bottom: 50px; */
+}
+/* .ul.menu-right li a{
+    background:blue;
+    width: 60px;
+    height: 60px
+
+} */
+
+.nametrangchu.d-flex.justify-content-center.align-items-center a:hover{
+    text-decoration: none;
+    
+
+}
+
+
+

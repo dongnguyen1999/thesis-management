@@ -35,6 +35,18 @@
    
 
   </div>
+
+  <div class="container ">
+    <div class="row justify-content-center" style="padding-top: 10px;  ">
+
+        <div class="col-md-12">
+          <div class="card">
+              <img style="width :1100px ;height:600px ;"src="/vendor/anh.jpg">
+          </div>
+      </div>
+    </div>
+</div>
+  
 @endsection
 
 @section('script')

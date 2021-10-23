@@ -1,207 +1,208 @@
+<style>
+  
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background:#37474F;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+  border-right: 1px solid ;
+  
+ 
+  
+
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  
+}
+
+#sidebar header a:hover {
+  color: #fff;
+  width:250px;
+ 
+}
+
+#sidebar  ul {
+    height: 50px;
+   
+   
+  }
+
+#sidebar .nav li {
+    padding: 10px;
+    width:250px;
+    text-decoration: none;
+   
+    
+  
+}
+#sidebar .nav li:hover {
+    background-color: #04AA6D;
+    width:250px;
+
+    text-decoration: none;
+
+  
+}
+
+#sidebar .nav a{
+  background: none;
+ 
+  color: #ffffff;
+  font-size: 14px;
+  padding: 16px 10px;
+  
+  
+}
+
+
+#sidebar .nav a:hover{
+  background: none;
+  color: #ECEFF1;
+  
+  
+}
+
+#sidebar .nav a i{
+  /* margin-right: 75%; */
+  /* text-align: left; */
+  width:250px;
+
+}
+
+.nav .navbar-nav .navbar-right .login{
+    text-align: right;
+}
+
+.navbar-default-login{
+    background-color:#f1f1f1;
+    height: 52px;
+   
+
+}
+.btn-login{
+    list-style: none;
+    position: absolute;
+    /* left: 89%; */
+    right:5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row.banner{
+  background-color:hsla(210, 100%, 99%, 0.945);
+  height:570px; 
+  margin: 10px 10px 1px 250px; border:1px solid;
+}
+</style>
+
+
 <header>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-      <div class="container">
 
-        <!-- Brand -->
-        <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-          <strong>MDB</strong>
-        </a>
-
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <!-- Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank">Free
-                download</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
-            </li>
-          </ul>
-
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
-                target="_blank">
-                <i class="fab fa-github mr-2"></i>MDB GitHub
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-    </nav>
-    <!-- Navbar -->
-
-    <!--Carousel Wrapper-->
-    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-
-      <!--Indicators-->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-      </ol>
-      <!--/.Indicators-->
-
-      <!--Slides-->
-      <div class="carousel-inner" role="listbox">
-
-        <!--First slide-->
-        <div class="carousel-item active">
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/nature7.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            <!-- Mask & flexbox options-->
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-              <!-- Content -->
-              <div class="text-center white-text mx-5 wow fadeIn">
-                <h1 class="mb-4">
-                  <strong>Learn Bootstrap 4 with MDB</strong>
-                </h1>
-
-                <p>
-                  <strong>Best & free guide of responsive web design</strong>
-                </p>
-
-                <p class="mb-4 d-none d-md-block">
-                  <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
-                    written versions
-                    available. Create your own, stunning website.</strong>
-                </p>
-
-                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-                  free tutorial
-                  <i class="fas fa-graduation-cap ml-2"></i>
-                </a>
-              </div>
-              <!-- Content -->
-
-            </div>
-            <!-- Mask & flexbox options-->
-
-          </div>
-        </div>
-        <!--/First slide-->
-
-        <!--Second slide-->
-        <div class="carousel-item">
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            <!-- Mask & flexbox options-->
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-              <!-- Content -->
-              <div class="text-center white-text mx-5 wow fadeIn">
-                <h1 class="mb-4">
-                  <strong>Learn Bootstrap 4 with MDB</strong>
-                </h1>
-
-                <p>
-                  <strong>Best & free guide of responsive web design</strong>
-                </p>
-
-                <p class="mb-4 d-none d-md-block">
-                  <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
-                    written versions
-                    available. Create your own, stunning website.</strong>
-                </p>
-
-                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-                  free tutorial
-                  <i class="fas fa-graduation-cap ml-2"></i>
-                </a>
-              </div>
-              <!-- Content -->
-
-            </div>
-            <!-- Mask & flexbox options-->
-
-          </div>
-        </div>
-        <!--/Second slide-->
-
-        <!--Third slide-->
-        <div class="carousel-item">
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/47.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            <!-- Mask & flexbox options-->
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-              <!-- Content -->
-              <div class="text-center white-text mx-5 wow fadeIn">
-                <h1 class="mb-4">
-                  <strong>Learn Bootstrap 4 with MDB</strong>
-                </h1>
-
-                <p>
-                  <strong>Best & free guide of responsive web design</strong>
-                </p>
-
-                <p class="mb-4 d-none d-md-block">
-                  <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
-                    written versions
-                    available. Create your own, stunning website.</strong>
-                </p>
-
-                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-                  free tutorial
-                  <i class="fas fa-graduation-cap ml-2"></i>
-                </a>
-              </div>
-              <!-- Content -->
-
-            </div>
-            <!-- Mask & flexbox options-->
-
-          </div>
-        </div>
-        <!--/Third slide-->
-
-      </div>
-      <!--/.Slides-->
-
-      <!--Controls-->
-      <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <!--/.Controls-->
-
+  <div id="viewport">
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <header>
+        <a href="#">Trang chủ </a>
+      </header>
+      <ul class="nav sidebar-nav">
+        <li >
+          <a href="#">
+             Giới thiệu 
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="zmdi zmdi-link"></i> Hệ thống quản lý sinh viên
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="zmdi zmdi-widgets"></i> Hệ thống quản lý giảng viên 
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="#">
+             About
+          </a>
+        </li>
+        <li>
+          <a href="#" class>
+            <i class="zmdi zmdi-settings"></i> Services
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="zmdi zmdi-comment-more"></i> Contact
+          </a>
+        </li>
+      </ul>
     </div>
-    <!--/.Carousel Wrapper-->
-
-</header>
+    <!-- Content -->
+    <div id="content">
+      <nav class="navbar navbar-default-login">
+        <div class="container-fluid">
+         <ul class="btn-login"style="  " >
+             <li style=" text-align:right ; ">
+             <a href="project/dangnhap.php"> <button type="button" class="btn btn-success" style="background-color:#04AA6D; list-style: none; text-align:right;height: 40px; color:20px
+             ">Đăng nhập</button></a>
+             </li>
+         </ul>
+              
+            
+     
+        </div>
+      </nav>
+      
+    </div>
+  </div>
+      
+  </header>

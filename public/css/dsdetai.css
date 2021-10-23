@@ -1,0 +1,96 @@
+/* .danhsachdetailuanvan {
+    text-align: center;
+} */
+/* table.table.table-hover.table-danhsachdetai {
+    margin-right:10px;
+} */
+
+.container.danhsachdetailuanvan{
+    margin-left:7px;
+    height: 500px;
+    width: 1100px;
+ 
+}
+a#btn-themdetai.btn.btn-themdsdetai{
+    background-color: rgb(7, 110, 29);
+    color:white;
+
+}
+
+
+button.btn.btn-chucnang{
+    /* style="width:60px; height:23px; font-size :9px; text-align:center; padding:5px 0px 5px 0px; color:black;" */
+
+    width:60px; 
+    height:23px; 
+    font-size :9px; 
+    text-align:center; 
+    padding:5px 0px 5px 0px;
+    color:white;
+    background-color: rgb(7, 110, 29);
+  
+}
+button.btn.btn-chucnang:hover{
+    color:white;
+    background-color: rgb(5, 65, 18);
+}
+
+/* them danh sach de tai  */
+
+.formcontainer{
+    width: 800px;
+    height: 450px;
+    border: 2px solid  rgb(7, 110, 29); ;
+    border-radius:25px;
+    margin-left: 150px;
+    background-color:white;
+    margin-bottom: 20px;
+}
+.formthemdetai{
+    padding: 10px 10px;
+}
+
+.md-form{
+    padding :10px 20px;
+}
+label.formdetai{
+    text-align: left;
+    color: black;
+
+}
+button.btn.btn-them{
+    /* style="width:60px; height:23px; font-size :9px; text-align:center; padding:5px 0px 5px 0px; color:black;" */
+
+    width:80px; 
+    height:30px; 
+    font-size :10px; 
+    text-align:center; 
+    padding:5px 0px 5px 0px;
+    color:white;
+    background-color: rgb(7, 110, 29); 
+}
+button.btn.btn-them:hover{
+    color:white;
+    background-color: rgb(5, 65, 18);
+}
+/* chinh sua danh sach de tai */
+button.btn.btn-capnhat{
+    /* style="width:60px; height:23px; font-size :9px; text-align:center; padding:5px 0px 5px 0px; color:black;" */
+
+    width:80px; 
+    height:30px; 
+    font-size :10px; 
+    text-align:center; 
+    padding:5px 0px 5px 0px;
+    color:white;
+    background-color: rgb(7, 110, 29); 
+}
+button.btn.btn-capnhat:hover{
+    color:white;
+    background-color: rgb(5, 65, 18);
+}
+
+
+
+
+

@@ -13,11 +13,14 @@
 </head>
 <body>
 
-  @include('components.header')
+  @include('components.sidebar')
 
-  <main>
+  <main style=" margin-left:260px;">
       @yield('content')
+
   </main>
+
+  
 
   @include('components.footer')
 
