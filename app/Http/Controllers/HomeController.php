@@ -38,7 +38,26 @@ class HomeController extends Controller
 
     // trong student
     public function dkluanvan() {
-        $dsgiangvien = NguoiDung::where('nd_ma', 'like' , 'GV%' )->get();
+        //Review note:
+        // insert VaiTro
+        // 1, SINH_VIEN, Sinh viên
+        // 2, GIANG_VIEN, Giảng viên
+        // 3, ADMIN, Quản trị viên
+
+        $dsnguoidung = NguoiDung::all();
+
+        $dsgiangvien = $dsnguoidung->filter(function ($nguoidung) {
+            return $nguoidung->vai_tro->vt_ma == 'GIANG_VIEN';
+        })->values();
+
+        // $danhsachmoi = $danhsach->filter(function ($phantu) {
+        //     return $phantu->id == 1;
+        // })->values();
+
+        // print_r($dsgiangvien);
+
+        // $dsgiangvien = NguoiDung::where('nd_ma', 'like' , 'GV%' )->get();
+
         // dd($dsgiangvien);
         return view('project.dkluanvan')->with('dsgiangvien' , $dsgiangvien);
     }

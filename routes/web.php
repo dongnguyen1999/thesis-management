@@ -22,7 +22,7 @@ Route::post('/postLogin', [HomeController::class, 'postLogin'])->name('postLogin
 //student
 Route::get('/student', [HomeController::class, 'student']);
     Route::get('/student/dkluanvan', [HomeController::class, 'dkluanvan']);
-    Route::get('/student/dkluanvan/dkdetai/{nd_id}', [HomeController::class, 'dkdetai']);
+    Route::get('/student/dkluanvan/dkdetai/{nd_id}', [HomeController::class, 'dkdetai'])->name('student.dkluanvan.dkdetai');
     // Route::get('/student/dkluanvan', [HomeController::class, 'dkluanvan']);
 // lester
 Route::get('/lecturers', [HomeController::class, 'lecturers']);
