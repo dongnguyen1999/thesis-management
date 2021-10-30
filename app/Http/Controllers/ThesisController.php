@@ -7,14 +7,30 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\BoMon;
 use App\Models\NganhHoc;
+use App\Models\NguoiDung;
 use App\Models\ThesisModel;
-use DB;
+use Illuminate\Support\Facades\DB; // e import kiểu này, nó sẽ k báo đỏ chỗ DB nữa
 use Illuminate\Database\QueryException;
 
 class ThesisController extends Controller
 {
 
+    public function BoMon(Request $request)
+    {
+        $bomon = $request->input('bomon');
+        return view('project.student')->with(['dsbomon' => $bomon]);
 
+
+        //
+    }
+
+    public function GiangVien(request $request)
+    {
+        $giangvien = NguoiDung::all();
+        dd($giangvien);
+        // $giangvien = $request->input('');
+        // return view('project.dkluanvan')->with(['dsgiangvien' => $giangvien]);
+    }
 
     // public function student($id) {
     //     $data = nguoi_dung ::all();
@@ -103,12 +119,10 @@ class ThesisController extends Controller
 
         $nganh = NganhHoc::find(1);
         // print_r($nganh->toArray());
-        $bomon = $nganh->boMon;
-
-        $dsbm = BoMon::all();
+        $bomon = $nganh->bo_mon;
 
         // do model xuong view
-        return view('project.login')->with(['nganh' => $nganh, 'bomon' => $bomon, 'dsbm' => $dsbm]);
+        return view('project.login')->with(['nganh' => $nganh, 'bomon' => $bomon]);
 
         // $nguoidung->lop->nganh->boMon;
     }

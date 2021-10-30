@@ -13,11 +13,15 @@ return [
     |
     */
 
-    'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
-    ],
+    // 'defaults' => [
+    //     'guard' => 'web',
+    //     'passwords' => 'users',
+    // ],
 
+    'defaults' => [
+        'guard' => 'NguoiDung',
+        'passwords' => 'NguoiDungs',
+    ],
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -39,6 +43,10 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+        'NguoiDung' => [
+            'driver' => 'session',
+            'provider' => 'NguoiDungs',
         ],
     ],
 
@@ -65,6 +73,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'NguoiDungs' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\NguoiDung::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -93,6 +105,13 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'NguoiDungs' => [
+            'provider' => 'NguoiDung',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
     ],
 
     /*

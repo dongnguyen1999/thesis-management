@@ -10,9 +10,12 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
 /**
  * Class NguoiDung
- * 
+ *
  * @property int $nd_id
  * @property int $vt_id
  * @property int|null $td_id
@@ -26,7 +29,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $nd_email
  * @property string|null $nd_tentk
  * @property string|null $nd_password
- * 
+ *
  * @property VaiTro $vai_tro
  * @property TrinhDo|null $trinh_do
  * @property BoMon|null $bo_mon
@@ -38,8 +41,10 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-class NguoiDung extends Model
+class NguoiDung extends Authenticatable
 {
+    use Notifiable;
+
 	protected $table = 'nguoi_dung';
 	protected $primaryKey = 'nd_id';
 	public $timestamps = false;
@@ -73,6 +78,10 @@ class NguoiDung extends Model
 		'nd_tentk',
 		'nd_password'
 	];
+    public function getAuthPassword()
+    {
+        return $this->nd_password;
+    }
 
 	public function vai_tro()
 	{

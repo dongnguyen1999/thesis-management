@@ -46,27 +46,28 @@
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
 
-                  <form>
+                    <form action="{{ route('postLogin')}}" method="post">
+
 
                     {{-- <div class="d-flex justify-content-center align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                       <span class="h1 fw-bold mb-0">Logo</span>
                     </div> --}}
-
+                    @csrf 
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; text-align:center; font-size:25px;">Thông tin đăng nhập </h5>
 
                     <div class="form-outline mb-4">
-                      <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                      <input type="text" id="form2Example17" name="mssv" class="form-control form-control-lg" />
                       <label class="form-label" for="form2Example17">Mã số đăng nhập</label>
                     </div>
 
                     <div class="form-outline mb-4">
-                      <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                      <input type="password" name="password" id="form2Example27" class="form-control form-control-lg" />
                       <label class="form-label" for="form2Example27">Mật khẩu </label>
                     </div>
 
                     <div class="pt-1 mb-4 ">
-                      <button class="btn btn-dark btn-lg btn-block " style="backgroud-color: #ff6219; !important"type="button">Login</button>
+                      <button class="btn btn-dark btn-lg btn-block " style="backgroud-color: #ff6219; !important"type="submit">Đăng nhập</button>
                     </div>
 
                     {{-- <a class="small text-muted" href="#!">Forgot password?</a> --}}
