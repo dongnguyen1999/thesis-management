@@ -16,9 +16,9 @@
                 <br />
 
             </div>
-            <div class="vungdangky"></div>
 
-            <div style=" margin-top:20px; border:2px solid #04AA6D;">
+        <div style=" margin-top:20px; border:2px solid #04AA6D;">
+            <form>
                 <table boder=2 class="table table-hover  table-dangky">
                     <tr align="center" style=" border-bottom:1px solid black ">
                         <td class="stt">STT</td>
@@ -29,25 +29,23 @@
 
                     </tr>
                     @foreach ($dsgiangvien as $giangvien)
-                        {{ $giangvien->nd_ten }}
-
                         <tr align="center">
                             <td></td>
                             <td> {{ $giangvien->nd_ten }}</td>
                             <td> {{ $giangvien->bo_mon->bm_ten }}</td>
                             <td>
-                                {{-- <a href=" {{ route('student.dkluanvan.dkdetai', ['nd_id' => $giangvien->nd_id ])}} "><button
-                                        style="width:60px; height:20px; font-size :7px; text-align:center; padding:5px 0px 5px 0px;"
-                                        type="button" class="btn btn-danger btn-dangky" onlink="dangky();">Đăng ký</button> --}}
-                                <a href=" {{ route('student.dkluanvan.dkdetai', ['nd_id' => $giangvien->nd_id ])}} " > dang ky </a>
+                                 {{-- <a href=" {{ route('student.dkluanvan.dkdetai', ['nd_id' => $giangvien->nd_id ])}} "><button
+                                    style="width:60px; height:20px; font-size :7px; text-align:center; padding:5px 0px 5px 0px;"
+                                    type="button" class="btn btn-danger btn-dangky" onlink="dangky();">Đăng ký</button> --}}
+                                    <a href=" {{ route('student.dkluanvan.dkdetai', ['nd_id' => $giangvien->nd_id ])}} " > Đăng ký </a>
                             </td>
                         </tr>
                     @endforeach
                 </table>
-                <div>
-                </div>
-
-            </div>
+            </form>
+        <div>
+    </div>
+</div>
 
 
 

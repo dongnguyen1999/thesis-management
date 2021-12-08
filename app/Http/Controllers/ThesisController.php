@@ -127,8 +127,18 @@ class ThesisController extends Controller
         // $nguoidung->lop->nganh->boMon;
     }
 
+    // public function DeTai(Request $request)
+    // {
+    //     $input = $request->all();
+    //     $input['dt_id'];
+    //     $input['dt_ten'];
+
+    //     return view('project.dsdetai')->with('input' ,$input);
 
 
+    //     // $detai = $request->input('detai');
+    //     // return view('project.dsdetai')->with(['dsdetai' => $detai]);
+    // }
 
 
 }

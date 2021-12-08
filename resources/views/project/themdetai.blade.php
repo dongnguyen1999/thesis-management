@@ -4,7 +4,7 @@
 
 @section('style')
   <link rel="stylesheet" href="/css/dsdetai.css" />
-  
+
 @endsection
 
 @section('content')
@@ -16,45 +16,31 @@
 
 <div class="formcontainer" >
     <div class="formthemdetai">
-        <form class="themdetai" style="color: #757575;" action="#!">
+        <form id="formthemdt" style="color: #757575;" action="/formtestthemdetai" method="get">
+            @csrf <!-- Rat rat rat x 3000 quan trong-->
             <div class="row">
                 <div class="col-md-6">
                     <div class="md-form">
-                        <label class="Formdetai">Mã Đề Tài </label>
-                        <input type="text" id="Formmadetai" class="form-control">
-                        
+                        <label class="madetai" for="dt_ma">Mã Đề Tài</label>
+                        <input type="text" name="dt_ma" id="dt_ma" class="form-control require">
+                        <div class="invalid-feedback"></div>
                     </div>
                     <div class="md-form">
-                        <label class="Formdetai">Tên Đề Tài </label>
-                        <input type="text" id="Formtendetai" class="form-control">
-                        
+                        <label class="tendetai" for="dt_ten">Tên Đề Tài </label>
+                        <input type="text" name="dt_ten" id="dt_ten" class="form-control require">
+                        <div class="invalid-feedback"></div>
                     </div>
-                    <div class="md-form">
-                        <label class="Formdetai"> Bộ môn  </label>
-                        <select name="bomon" class="form-control">
-                            <option value="cntt">Công nghệ thông tin</option>
-                            <option value="cnpm">Công nghệ phần mềm</option>
-                            <option value="httt">Hệ thống thông tin</option>
-                            <option value="mmt-tt">Mạng máy tính - Truyền thông </option>
-                            <option value="khmt">Khoa học máy tính </option>
-                            <option value="thud">Tin học ứng dụng </option>
-                        </select>
-                    </div>
-                    <div class="md-form">
-                        <label class="Formdetai">Ngày thêm đề tài </label>
-                        <input placeholder="Select date" type="text" id="example" class="form-control">
-                    </div>
+
                 </div>
                 <div class="col-md-6">
-                    <form action="" method="post" >
-                        <label class="Formdetai" style=" padding-top : 10px;">Mô tả chi tiết đề tài </label>
-                        <textarea cols="40" rows="7" name="chitietdetai"></textarea><br>
-                        <button  type="submit" class="btn btn-them" onlink="them();" >Thêm</button> 
-                    </form>
-                    <?php if(isset($_POST["chitietdetai"])) { echo $_POST["chitietdetai"]; } ?>
+                    {{-- <form action="" method="post" > --}}
+                        <label class="Formdetai" for="dt_mota"  style=" padding-top : 10px;">Mô tả chi tiết đề tài</label>
+                        <textarea cols="40" rows="7" name="dt_mota" id="dt_mota"></textarea><br>
+                        <button  type="submit" class="btn btn-them" onlink="them();" >Thêm</button>
+                    {{-- </form> --}}
+                    <?php if(isset($_GET["Formmotachitietdetai"])) { echo $_GET["Formmotachitietdetai"]; } ?>
                 </div>
             </div>
-            
         </form>
     </div>
 </div>
@@ -76,8 +62,29 @@
     </script>
     <script src="/js/homepage.js"></script>
     <script>
-        $('#noti1').modal('show'); 
+        $('#noti1').modal('show');
     </script>
-  
+
+    {{-- import script --}}
+    <script src="/js/form-validation.js"></script>
+    <script>
+        $(function(){
+
+            let config = {
+
+                'require': (value) => {
+                    if (!value) {
+                        //value empty, undefined, null
+                        return "Bắt buộc";
+                    }
+                },
+
+            }
+
+            setValidation('formthemdt', config);
+        })
+
+    </script>
+
 @endsection
-    
+

@@ -53,7 +53,7 @@
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                       <span class="h1 fw-bold mb-0">Logo</span>
                     </div> --}}
-                    @csrf 
+                    @csrf
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; text-align:center; font-size:25px;">Thông tin đăng nhập </h5>
 
                     <div class="form-outline mb-4">

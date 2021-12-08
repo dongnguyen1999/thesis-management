@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DkGiangvien;
 use App\Models\NguoiDung;
+use App\Models\DeTai;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -65,7 +66,6 @@ class HomeController extends Controller
     public function dkdetai( Request $request){
 
         $nd_id = $request->nd_id; //id giang vien
-
         $dsdetai = NguoiDung::find($nd_id)->de_tais;
 
         return view('project.dkdetai')
@@ -89,9 +89,9 @@ class HomeController extends Controller
     }
 
 
-
-
-
+    public function dsgiangvienhuongdan() {
+        return view('project.dsgiangvienhuongdan');
+    }
 
     // public function hello() {
     //     return view('welcome');

@@ -26,6 +26,26 @@ class TestFormController extends Controller
 
     }
 
+    // GET: /form/get
+    public function detai(Request $request) {
+
+        // get all params
+
+        // print_r($request->all());
+        // $params = $request->all();
+        // $params['firstName'];
+        // $params['lastName'];
+
+
+        // get 1 param
+
+        // print_r($request->get('firstName')); // get $_GET['firstName']
+        // print_r($request->input('firstName'));
+
+        return view('project.themdetai');
+
+    }
+
     // POST: /form/post
     public function testPost(Request $request) {
 
@@ -48,5 +68,15 @@ class TestFormController extends Controller
     public function formView() {
         // return view('project.loginDong');
         return view('test.form');
+    }
+
+    public function Formthemdetai(Request $request) {
+
+        // get all params
+
+        print_r($request->all());
+        return view('project.dsdetai');
+
+
     }
 }
