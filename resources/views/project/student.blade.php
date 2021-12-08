@@ -17,14 +17,12 @@
                     <td style="text-align:center; font-size:25px;" colspan=2 >THÔNG TIN SINH VIÊN</td>
 
                 </tr>
-            @foreach($dsbomon as $row)
                 <tr>
-                    <td >Mã SV</td>
-                    <td >{{ $row->bm_ma }}</td>
+                    <td>Mã SV</td>
+                    <td>B1706537</td>
                     {{-- <td ></td> --}}
 
                 </tr>
-            @endforeach
                 <tr>
                     <td>Họ tên</td>
                     <td >Nguyễn Thị minh Thư</td>

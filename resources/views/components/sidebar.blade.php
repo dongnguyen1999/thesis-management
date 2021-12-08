@@ -130,59 +130,58 @@
 
 <header>
 
-      <div id="viewport">
+    <div id="viewport">
         <!-- Sidebar -->
         <div id="sidebar">
-          <header>
-            <a href="/">Trang chủ </a>
-          </header>
-          <ul class="nav sidebar-nav">
-            <li class="{{ Request::path() == '/' ? 'active' : '' }}">
-              <a href="#">
-                 Giới thiệu
-              </a>
-            </li>
-            <li class="{{Str::startsWith( Request::path(), 'student') ? 'active' : '' }}">
-              <a href="/student">
-                <i class="zmdi zmdi-widgets"></i> Hệ thống quản lý sinh viên
-              </a>
-            </li>
+            <header>
+                <a href="/">Trang chủ </a>
+            </header>
+            <ul class="nav sidebar-nav">
+                <li class="{{ Request::path() == '/' ? 'active' : '' }}">
+                    <a href="/">
+                        Giới thiệu
+                    </a>
+                </li>
+                <li class="{{ Str::startsWith(Request::path(), 'student') ? 'active' : '' }}">
+                    <a href="/student">
+                        <i class="zmdi zmdi-widgets"></i> Quản lý sinh viên
+                    </a>
+                </li>
 
 
 
-            <li class="{{Str::startsWith( Request::path(), 'lecturers') ? 'active' : '' }}">
-              <a href="/lecturers">
-                <i class="zmdi zmdi-widgets"></i> Hệ thống quản lý giảng viên
-              </a>
-            </li>
-            <li class="{{ Request::path() == '' ? 'active' : '' }}">
-              <a href="#">
-                Quản lý danh mục
-              </a>
-            </li>
-            <li class="{{ Request::path() == '' ? 'active' : '' }}">
-              <a href="#">
-                 About
-              </a>
-          </ul>
+                <li class="{{ Str::startsWith(Request::path(), 'lecturers') ? 'active' : '' }}">
+                    <a href="/lecturers">
+                        <i class="zmdi zmdi-widgets"></i> Quản lý giảng viên
+                    </a>
+                </li>
+                <li class="{{ Request::path() == '' ? 'active' : '' }}">
+                    <a href="#">
+                        Quản lý danh mục
+                    </a>
+                </li>
+                <li class="{{ Request::path() == '' ? 'active' : '' }}">
+                    <a href="#">
+                        About
+                    </a>
+            </ul>
         </div>
         <!-- Content -->
         <div id="content">
-          <nav class="navbar navbar-default-login">
-            <div class="container-fluid">
-             <ul class="btn-login"style="  " >
-                 <li style=" text-align:right ; ">
-                 <a href="/login" type="button" id="btn-dangnhap" name="btn-dangnhap" class="btn btn-success" >Đăng nhập</a>
-                 </li>
-             </ul>
-
-
-
-            </div>
-          </nav>
+            <nav class="navbar navbar-default-login">
+                <div class="container-fluid d-flex justify-content-between">
+                    <div class="nav-title">
+                        {{ Request::path() == '/' ? 'Giới thiệu' : '' }}
+                        {{ Str::startsWith(Request::path(), 'student') ? 'Quản lý sinh viên' : '' }}
+                        {{ Str::startsWith(Request::path(), 'lecturers') ? 'Quản lý giảng viên' : '' }}
+                    </div>
+                    <div class="nav-btn-container">
+                        <a href="/login"> <button type="button" class="btn btn-success">Đăng nhập</button></a>
+                    </div>
+                </div>
+            </nav>
 
         </div>
-      </div>
+    </div>
 
 </header>
-

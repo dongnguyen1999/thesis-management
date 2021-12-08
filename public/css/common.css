@@ -1,11 +1,14 @@
+/* primary color: rgb(7, 110, 29); */
+
+
 body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
   }
-  
+
   /* Toggle Styles */
-  
+
   #viewport {
     padding-left: 250px;
     -webkit-transition: all 0.5s ease;
@@ -13,15 +16,15 @@ body {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  
+
   #content {
     width: 100%;
     position: relative;
     margin-right: 0;
   }
-  
+
   /* Sidebar Styles */
-  
+
   #sidebar {
     z-index: 1000;
     position: fixed;
@@ -36,92 +39,88 @@ body {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  
+
   #sidebar header {
     background-color: #263238;
     font-size: 20px;
     line-height: 52px;
     text-align: center;
     border-right: 1px solid ;
-    
-   
-    
-  
+
+
+
+
   }
-  
+
   #sidebar header a {
     color: #fff;
     display: block;
     text-decoration: none;
-    
+
   }
-  
+
   #sidebar header a:hover {
     color: #fff;
     width:250px;
-   
+
   }
-  
+
   #sidebar  ul {
       height: 50px;
-     
-     
+
+
     }
-  
+
   #sidebar .nav li {
     padding: 10px;
     width:250px;
     text-decoration: none;
-    
-    
+
+
   }
-  
+
   #sidebar .nav li:hover {
-    background-color: #04AA6D;
+    background-color: #74747428;
     width:250px;
     text-decoration: none;
-    
+    font-weight: bold;
   }
-  
+
   #sidebar .nav li:hover a {
     text-decoration: none;
-    color:black;
+    color: white;
     /* color:white; */
   }
-  
+
   #sidebar .nav a{
     background: none;
     font-size: 14px;
     padding: 16px 10px;
     color: #ffffff ;
-    
-    
   }
-  
-  
+
+
   #sidebar .nav a:hover{
     background: none;
     color: #ECEFF1;
-    
-    
   }
-  
+
   #sidebar .nav a i{
     /* margin-right: 75%; */
     /* text-align: left; */
     width:250px;
-  
+
   }
-  
+
   .nav .navbar-nav .navbar-right .login{
       text-align: right;
   }
-  
+
   .navbar-default-login{
       background-color:#f1f1f1;
       height: 52px;
-     
-  
+
+
   }
   .btn-login{
       list-style: none;
@@ -131,17 +130,64 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
   }
-  
+
   .row.banner{
     background-color:hsla(210, 100%, 99%, 0.945);
-    height:570px; 
+    height:570px;
     margin: 10px 10px 1px 250px; border:1px solid;
   }
 #sidebar .sidebar-nav li.active{
-    background-color:#04AA6D;
+    /* background-color:#04AA6D; */
+    background-color: rgb(7, 110, 29);
+    font-weight: bold;
 }
-    
+
 #sidebar .sidebar-nav li.active a{
-    color:black;
+    color:white;
      /* color:white; */
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: rgb(7, 110, 29) !important;
+}
+
+.bg-success {
+    background-color: rgb(7, 110, 29) !important;
+}
+
+/* .form-outline .form-control:focus~.form-label {
+    color: rgb(7, 110, 29) !important;
+}
+
+
+.form-control:focus {
+    background-color: red !important;
+    box-shadow: none !important;
+} */
+
+
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-top: .125rem solid rgb(7, 110, 29);
+    border-bottom: .125rem solid rgb(7, 110, 29);
+    border-left: .125rem solid rgb(7, 110, 29);
+}
+ .form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-bottom: .125rem solid;
+    border-color: rgb(7, 110, 29);
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: currentcolor currentcolor currentcolor rgb(7, 110, 29);
+    border-bottom: .125rem solid rgb(7, 110, 29);
+    border-right: .125rem solid rgb(7, 110, 29);
+    border-top: .125rem solid rgb(7, 110, 29);
+}
+
+.form-outline .form-control:focus~.form-label {
+    color: rgb(7, 110, 29);
 }

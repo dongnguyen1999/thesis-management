@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ThesisController;
 use App\Http\Controllers\TestFormController;
-
-
-
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LecturerController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,22 +19,28 @@ use App\Http\Controllers\TestFormController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/hello', [HomeController::class, 'hello'])->middleware('requireLogin');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
-Route::post('/postLogin', [HomeController::class, 'postLogin'])->name('postLogin');
+Route::post('/postLogin', [AuthController::class, 'postLogin'])->name('postLogin');
+// Route::post('/postLogout', [AuthController::class, 'postLogout'])->name('postLogout');
+Route::get('/logout', [AuthController::class, 'postLogout'])->name('postLogout');
+
 //student
-Route::get('/student', [HomeController::class, 'student']);
-    Route::get('/student/dkluanvan', [HomeController::class, 'dkluanvan']);
-        Route::get('/student/dkluanvan/dkdetai/{nd_id}', [HomeController::class, 'dkdetai'])->name('student.dkluanvan.dkdetai');
+Route::get('/student', [StudentController::class, 'student'])->middleware('requireLogin');
+    Route::get('/student/dkluanvan', [StudentController::class, 'dkluanvan']);
+        Route::get('/student/dkluanvan/dkdetai/{nd_id}', [StudentController::class, 'dkdetai'])->name('student.dkluanvan.dkdetai');
     // Route::get('/student/dkluanvan', [HomeController::class, 'dkluanvan']);
-    Route::get('/student/dsgiangvienhuongdan', [HomeController::class, 'dsgiangvienhuongdan']);
+    Route::get('/student/dsgiangvienhuongdan', [StudentController::class, 'dsgiangvienhuongdan']);
+
 // lester
-Route::get('/lecturers', [HomeController::class, 'lecturers']);
+Route::get('/lecturers', [LecturerController::class, 'lecturers']);
 // Route::get('/lecturers/dssinhviendangky', [HomeController::class, 'dssinhviendangky']);
-    Route::get('/lecturers/dsdetai', [HomeController::class, 'dsdetai']);
-        Route::get('/lecturers/dsdetai/themdetai', [HomeController::class, 'themdetai']);
-        Route::get('/lecturers/dsdetai/suadetai', [HomeController::class, 'suadetai']);
-    Route::get('/dssinhviendangky', [HomeController::class, 'dssinhviendangky']);
+    Route::get('/lecturers/dsdetai', [LecturerController::class, 'dsdetai']);
+        Route::get('/lecturers/dsdetai/themdetai', [LecturerController::class, 'themdetai']);
+        Route::get('/lecturers/dsdetai/suadetai', [LecturerController::class, 'suadetai']);
+    Route::get('/dssinhviendangky', [LecturerController::class, 'dssinhviendangky']);
     // Route::get('/lecturers/dssinhviendangky', [HomeController::class, 'dssinhviendangky']);
 
 
@@ -44,7 +50,7 @@ Route::get('/bomon/list', [ThesisController::class, 'listBoMon']);
 Route::get('/bomon/insert', [ThesisController::class, 'insertBoMonUseGet']);
 Route::get('/bomon/update', [ThesisController::class, 'updateBoMonUseGet']);
 Route::get('/bomon/{id}', [ThesisController::class, 'findId']);
-Route::get('/student', [ThesisController::class, 'listBoMon']);
+// Route::get('/student', [ThesisController::class, 'listBoMon']);
 Route::get('/lophoc/{id}', [ThesisController::class, 'findLopHoc']);
 
 // Route::get('/formtestthemdetai', [ThesisController::class, 'DeTai']);

@@ -9,26 +9,25 @@
     margin-left:7px;
     height: 500px;
     width: 1100px;
- 
+
 }
 a#btn-themdetai.btn.btn-themdsdetai{
     background-color: rgb(7, 110, 29);
     color:white;
-
 }
 
 
 button.btn.btn-chucnang{
     /* style="width:60px; height:23px; font-size :9px; text-align:center; padding:5px 0px 5px 0px; color:black;" */
 
-    width:60px; 
-    height:23px; 
-    font-size :9px; 
-    text-align:center; 
+    width:60px;
+    height:23px;
+    font-size :9px;
+    text-align:center;
     padding:5px 0px 5px 0px;
     color:white;
     background-color: rgb(7, 110, 29);
-  
+
 }
 button.btn.btn-chucnang:hover{
     color:white;
@@ -61,13 +60,13 @@ label.formdetai{
 button.btn.btn-them{
     /* style="width:60px; height:23px; font-size :9px; text-align:center; padding:5px 0px 5px 0px; color:black;" */
 
-    width:80px; 
-    height:30px; 
-    font-size :10px; 
-    text-align:center; 
+    width:80px;
+    height:30px;
+    font-size :10px;
+    text-align:center;
     padding:5px 0px 5px 0px;
     color:white;
-    background-color: rgb(7, 110, 29); 
+    background-color: rgb(7, 110, 29);
 }
 button.btn.btn-them:hover{
     color:white;
@@ -77,13 +76,13 @@ button.btn.btn-them:hover{
 button.btn.btn-capnhat{
     /* style="width:60px; height:23px; font-size :9px; text-align:center; padding:5px 0px 5px 0px; color:black;" */
 
-    width:80px; 
-    height:30px; 
-    font-size :10px; 
-    text-align:center; 
+    width:80px;
+    height:30px;
+    font-size :10px;
+    text-align:center;
     padding:5px 0px 5px 0px;
     color:white;
-    background-color: rgb(7, 110, 29); 
+    background-color: rgb(7, 110, 29);
 }
 button.btn.btn-capnhat:hover{
     color:white;

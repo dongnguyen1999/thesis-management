@@ -7,7 +7,7 @@ body{
 font-family: 'Roboto Condensed', sans-serif;
 font-size: 100%;
 
-}  
+}
 
 /*--header start here--*/
 .header-main {
@@ -69,7 +69,7 @@ font-size: 100%;
 } */
 
 .header-left-bottom input[type="submit"] {
-    background: #04AA6D;
+    background: rgb(7, 110, 29);
     color: #FFF;
     font-size: 21px;
     padding: 0.1em 0.5em;
@@ -102,9 +102,11 @@ font-size: 100%;
 
 .nametrangchu.d-flex.justify-content-center.align-items-center a:hover{
     text-decoration: none;
-    
+
 
 }
 
-
-
+.border-top-bot-success{
+    border-top:3px solid rgb(7, 110, 29);
+    border-bottom:3px solid rgb(7, 110, 29);
+}
