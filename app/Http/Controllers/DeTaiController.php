@@ -8,14 +8,13 @@ use App\Models\DeTai;
 class DeTaiController extends Controller
 {
     public function chitietdetai(Request $request) {
-        $dt_id = $request->route('dt_id'); 
-        
-        if ($dt_id) {
-            $detai = DeTai::find($dt_id);
+        $dt_id = $request->route('dt_id');
+        $detai = DeTai::find($dt_id);
+        if ($detai) {
             return view('project.chitietdetai')->with('detai', $detai);
         }
 
         return redirect('/not-found');
     }
-    
+
 }

@@ -39,11 +39,11 @@
                 </tr>
                 <tr>
                     <td>Ngành học</td>
-                    <td>{{ $user->lop_hoc->nganh_hoc->n_ten}}</td>
+                    <td>{{ $user->lop_hoc ? $user->lop_hoc->nganh_hoc->n_ten: ''}}</td>
                 </tr>
                 <tr>
                     <td>Khóa học</td>
-                    <td>{{ $user->lop_hoc->khoa_hoc->kh_ten}}</td>
+                    <td>{{ $user->lop_hoc ? $user->lop_hoc->khoa_hoc->kh_ten: ''}}</td>
 
                 </tr>
                 <tr>

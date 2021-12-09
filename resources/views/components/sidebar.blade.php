@@ -143,12 +143,12 @@
                     </a>
                 </li>
 
-                @if (isset($role) && in_array($role, array('ADMIN', 'SINH_VIEN')))
+                @if (isset($role) && in_array($role, array('SINH_VIEN')))
                   <li class="{{ Str::startsWith(Request::path(), 'student') ? 'active' : '' }}">
                     <a href="/student">
                         <i class="zmdi zmdi-widgets"></i> Quản lý sinh viên
                     </a>
-                  </li>  
+                  </li>
                 @endif
 
                 @if (isset($role) && in_array($role, array('ADMIN', 'GIANG_VIEN')))
@@ -173,7 +173,7 @@
                 </li>
             </ul>
         </div>
-        
+
         @include('components.header')
 
 

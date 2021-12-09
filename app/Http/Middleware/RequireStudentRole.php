@@ -19,7 +19,7 @@ class RequireStudentRole
     {
         if (Session::has('isLoggedIn')) {
             $role = Session::get('role');
-            if (in_array($role, array('ADMIN', 'SINH_VIEN'))) {
+            if (in_array($role, array('SINH_VIEN'))) {
                 return $next($request);
             }
         }

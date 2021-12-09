@@ -54,7 +54,7 @@ class LecturerController extends Controller
 
             $tendt = $detai->dt_ten;
 
-            $tenhk = strtolower($hkhientai->hknk_ten);
+            $tenhk = mb_strtolower($hkhientai->hknk_ten);
 
             return redirect('/lecturers/dsdetai')->with(['success' => 'Xóa thành công', 'message' => "Đã xóa đề tài $tendt khỏi danh sách đề tài $tenhk"]);
 

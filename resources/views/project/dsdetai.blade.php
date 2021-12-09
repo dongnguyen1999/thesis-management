@@ -155,6 +155,7 @@
         $(function() {
             $('i.fa-trash-alt').click(function() { // setup delete button
                 let dt_id = $(this).data('id');
+
                 $('#deleteWarning .btn-confirm').click(function() {
                     window.location.href = `/lecturers/dsdetai/xoadetai/${dt_id}`;
                 });
