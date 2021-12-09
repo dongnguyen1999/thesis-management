@@ -20,7 +20,12 @@
         </div>
         <div class="modal-body">{{$content}}</div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-{{$color}}" data-dismiss="modal">
+            @if (isset($confirmText))
+                <button type="button" class="btn btn-{{$color}} btn-confirm" data-dismiss="modal">
+                    {{$confirmText}}
+                </button>
+            @endif
+            <button type="button" class="btn btn-disabled" data-dismiss="modal">
                 Close
             </button>
         </div>

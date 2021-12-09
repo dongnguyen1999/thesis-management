@@ -35,10 +35,13 @@ Route::get('/detai/{dt_id}', [DeTaiController::class, 'chitietdetai']);
 
 //student
 Route::get('/student', [StudentController::class, 'student']);
-    Route::get('/student/dkluanvan', [StudentController::class, 'dkluanvan']);
-        Route::get('/student/dkluanvan/dkdetai/{nd_id}', [StudentController::class, 'dkdetai'])->name('student.dkluanvan.dkdetai');
-    // Route::get('/student/dkluanvan', [HomeController::class, 'dkluanvan']);
+    Route::get('/student/dsdetai', [StudentController::class, 'dsdetai']);
+    Route::get('/student/dkdetai/{dt_id}', [StudentController::class, 'dkdetai']);
+    Route::get('/student/huydkdetai/{dt_id}', [StudentController::class, 'huydkdetai']);
     Route::get('/student/dsgiangvienhuongdan', [StudentController::class, 'dsgiangvienhuongdan']);
+    Route::get('/student/dkgiangvien/{nd_id}', [StudentController::class, 'dkgiangvien']);
+    Route::get('/student/huydkgiangvien/{nd_id}', [StudentController::class, 'huydkgiangvien']);
+
 
 // lester
 Route::get('/lecturers', [LecturerController::class, 'lecturers']);
@@ -47,6 +50,7 @@ Route::get('/lecturers', [LecturerController::class, 'lecturers']);
         Route::get('/lecturers/dsdetai/themdetai', [LecturerController::class, 'themdetai']);
         Route::post('/lecturers/dsdetai/themdetai', [LecturerController::class, 'xulythemdetai']);
         Route::get('/lecturers/dsdetai/suadetai/{dt_id}', [LecturerController::class, 'suadetai']);
+        Route::get('/lecturers/dsdetai/xoadetai/{dt_id}', [LecturerController::class, 'xoadetai']);
     Route::get('/lecturers/dssinhviendangky', [LecturerController::class, 'dssinhviendangky']);
     // Route::get('/lecturers/dssinhviendangky', [HomeController::class, 'dssinhviendangky']);
 

@@ -12,8 +12,12 @@
 <div class="container">
 
     <div class="row">
-        <button type="button" class="btn btn-sm btn-success mt-3 ml-3" style="width: 50px"><a href="/lecturers/dsdetai"><i class="fas fa-arrow-left text-white"></i></a></button>
-    </div>    
+        <div class="col-md-12">
+            <a href="{{ URL::previous() }}">
+                <button type="button" class="btn btn-sm btn-success mt-3" style="width: 50px"><i class="fas fa-arrow-left text-white"></i></button>
+            </a>
+        </div>
+    </div>
 
     <h4 class="title text-center">CHI TIẾT ĐỀ TÀI</h4>
 

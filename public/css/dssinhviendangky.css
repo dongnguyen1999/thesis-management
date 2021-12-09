@@ -1,7 +1,10 @@
 .container.danhsachsinhviendangky{
-    
+
     padding-right: 30px;
     margin-bottom: 30px;
-   
 
+}
+
+tr.registered {
+    background-color: #e7e4d4;
 }

@@ -5,7 +5,8 @@ body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-  }
+    padding-right: 0 !important
+}
 
   /* Toggle Styles */
 
@@ -244,19 +245,19 @@ table.table-hover tr td{
   padding:4px;
   margin-top: 10px;
   border: 1px solid black;
-  
+
 }
 table.table-hover tr:hover {
   background-color: #d4e7dc;
-  
+
 }
 table.table-hover tr td.tensv {
   width: 200px;
-      
+
 }
 table.table-hover tr td.mssv {
   width: 130px;
-      
+
 }
 
 thead th {

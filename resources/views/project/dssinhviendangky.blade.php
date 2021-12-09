@@ -10,9 +10,13 @@
 @section('content')
 <div class="container danhsachsinhviendangky">
     <div class="row">
-        <button type="button" class="btn btn-sm btn-success mt-3 ml-3" style="width: 50px"><a href="/lecturers"><i class="fas fa-arrow-left text-white"></i></a></button>
+        <div class="col-md-12">
+            <a href="/lecturers">
+                <button type="button" class="btn btn-sm btn-success mt-3" style="width: 50px"><i class="fas fa-arrow-left text-white"></i></button>
+            </a>
+        </div>
     </div>
-    
+
     <div class="row">
       <div class="danhsachsinhviendangky"  style="text-align:center; " >
         <br/>
@@ -45,9 +49,9 @@
                             <td>{{ isset($sinhvien->de_tai) ? $sinhvien->de_tai->dt_ten : 'Chưa đăng ký đề tài'}}</td>
                         </tr>
                     @endforeach
-                    
+
                 </tbody>
-                
+
             </table>
         <form>
     <div>

@@ -95,5 +95,9 @@ button.btn.btn-capnhat:hover{
 }
 
 .dt-content {
-    
+
+}
+
+tr.registered {
+    background-color: #e7e4d4;
 }

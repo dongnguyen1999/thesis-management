@@ -12,8 +12,12 @@
 <div class="container">
 
     <div class="row">
-        <button type="button" class="btn btn-sm btn-success mt-3 ml-3" style="width: 50px"><a href="/lecturers/dsdetai"><i class="fas fa-arrow-left text-white"></i></a></button>
-    </div>    
+        <div class="col-md-12">
+            <a href="/lecturers/dsdetai">
+                <button type="button" class="btn btn-sm btn-success mt-3" style="width: 50px"><i class="fas fa-arrow-left text-white"></i></button>
+            </a>
+        </div>
+    </div>
 
     <h4 class="title text-center">{{ isset($detai)? 'SỬA ĐỀ TÀI':'THÊM ĐỀ TÀI' }}</h4>
 
@@ -31,7 +35,7 @@
                             <div class="invalid-feedback"></div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-8">
                         <div class="form-outline mb-4">
                             <input type="text" id="dt_ten" name="dt_ten" class="form-control form-control-lg required" value="{{ isset($detai)? $detai->dt_ten: '' }}"/>
@@ -48,7 +52,7 @@
                                 {{ isset($detai)? $detai->dt_mota: '' }}
                             </textarea>
                     </div>
-                    
+
                     <?php if(isset($_GET["Formmotachitietdetai"])) { echo $_GET["Formmotachitietdetai"]; } ?>
 
                 </div>
@@ -80,7 +84,7 @@
 @endsection
 
 @section('script')
-    <script src="/js/"></script>
+    <script src="/vendor/mdbootstrap/js/mdb.min.js"></script>
 
     <script>
         var today = new Date();

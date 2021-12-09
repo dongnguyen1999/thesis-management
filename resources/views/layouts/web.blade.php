@@ -19,14 +19,13 @@
       @yield('content')
   </main>
 
-  
+
 
   @include('components.footer')
 
   <script src="/vendor/jquery/jquery.slim.min.js"></script>
   <script src="/vendor/popperjs/popper.min.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/vendor/mdbootstrap/js/mdb.min.js"></script>
   <script src="/js/common.js"></script>
   @yield('script')
 

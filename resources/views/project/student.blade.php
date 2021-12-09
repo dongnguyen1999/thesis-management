@@ -4,7 +4,6 @@
 
 @section('style')
   <link rel="stylesheet" href="/css/students.css" />
-
 @endsection
 
 @section('content')
@@ -68,7 +67,7 @@
 
             </table>
         </div>
-        <div class="col-md-5" style=" border:1px solid #04AA6D;border-radius: 25px; padding-top :10px;  margin-left:30px;  " >
+        <div class="col-md-5 position-relative" style=" border:1px solid #04AA6D;border-radius: 25px; padding-top :10px;  margin-left:30px;  " >
             <table  class="table table-bordered-thongtinluanvan" style="border: 1px solid white ;margin-top :10px;">
 
                 <tr>
@@ -81,7 +80,7 @@
                     </td>
                     <td >
                         <div align="center">
-                            <a href="/student/dkluanvan">
+                            <a href="/student/dsdetai">
                                 <img src="/images/icon-register.png" style="width:50px ; height:50px; border-radius: 15px; border: 1px solid white" >
                             </a>
                         </div>
@@ -90,12 +89,12 @@
                 <tr>
                     <td>
                         <div align="center">
-                            <span>Giảng viên hướng dẫn</span>
+                            <span>Đăng ký giảng viên</span>
                         </div>
                     </td>
                     <td class="div_td">
                         <div align="center">
-                            <span >Đăng ký luận văn</span>
+                            <span >Đăng ký đề tài</span>
                         </div>
                     </td>
                 </tr>
@@ -129,35 +128,6 @@
                     </td>
                 </tr>
 
-                <tr>
-                    <td >
-                        <div align="center">
-                            <a href="#">
-                                <img src="/images/icon-people.png" style="width:50px ; height:50px; border-radius: 15px; border:1px solid #04AA6D ;" >
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div align="center">
-                            <a href="/dkluanvan">
-                                <img src="/images/icon-register.png" style="width:50px ; height:50px; border-radius: 15px;" >
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <div align="center">
-                            <span>Giảng viên hướng dẫn</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div align="center">
-                            <span >Đăng ký luận văn</span>
-                        </div>
-                    </td>
-                </tr>
-
 
                 <tr style="font-size:13px ;">
 
@@ -169,36 +139,57 @@
 
 
             </table>
-            
-            <div class="text-center" style="font-size:18px; padding :10px 0px;">Sinh viên chưa đăng ký luận văn</div>
-            {{-- <div style="border: 1px solid rgb(199, 196, 196); border-radius: 25px;">
-                <table class="namethongtinluanvan1" cellspacing="0" cellpadding="">
-                    <tr align="center" >
-                        <td colspan=2 style="text-align:center;font-size:15px; padding :10px 0px; ">THÔNG TIN LUẬN VĂN </td>
-                    </tr>
-                    <tr style="font-size:13px ;" >
-                        <td>Mã CB </td>
-                        <td colspan=2> htsfyvuygygavg8v888888vh</td>
-                    </tr>
-                    <tr style="font-size:13px ;" >
-                        <td>Họ và Tên</td>
-                        <td colspan=2>Nguyễn Trương Trịnh Thịnh </td>
-                    </tr>
-                    <tr style="font-size:13px ;">
-                        <td>Email </td>
-                        <td colspan=2></td>
-                    </tr>
-                    <tr  style="font-size:13px ;">
-                        <td>Điện thoại</td>
-                        <td colspan=2>Nguyễn Trương Trịnh Thịnh </td>
-                    </tr>
-                    <tr style="font-size:13px ;">
-                        <td>Đề Tài</td>
-                        <td colspan=2> Webside đăng ký và thực hiện luận văn khoa CNTT-TT</td>
-                    </tr>
-                </table>
-            </div> --}}
-            
+
+            @if ($giangvien)
+                <div style="position: absolute; bottom: 15px; left: 0; width: 100%; padding: 15px">
+                    <div style="border: 1px solid rgb(199, 196, 196); border-radius: 25px; padding: 15px;">
+                        <table class="namethongtinluanvan1 w-100" cellspacing="0" cellpadding="">
+                            <tr align="center" >
+                                <td colspan=2 style="text-align:center;font-size:15px;">THÔNG TIN LUẬN VĂN </td>
+                            </tr>
+                            <tr style="font-size:13px ;" >
+                                <td>Mã CB </td>
+                                <td colspan=2>{{$giangvien->nd_ma}}</td>
+                            </tr>
+                            <tr style="font-size:13px ;" >
+                                <td>Họ và Tên</td>
+                                <td colspan=2>{{$giangvien->nd_ten}}</td>
+                            </tr>
+                            <tr style="font-size:13px ;">
+                                <td>Email</td>
+                                <td colspan=2>{{$giangvien->nd_email}}</td>
+                            </tr>
+                            <tr  style="font-size:13px ;">
+                                <td>Điện thoại</td>
+                                <td colspan=2>{{$giangvien->nd_sdt}}</td>
+                            </tr>
+
+                                @if ($detai)
+                                    <tr style="font-size:13px ;">
+                                        <td>Đề Tài</td>
+                                        <td colspan=2>{{$detai->dt_ten}}</td>
+                                    </tr>
+                                    @if ($diem)
+                                        <tr style="font-size:13px ;">
+                                            <td>Tổng điểm</td>
+                                            <td colspan=2>{{$diem}}</td>
+                                        </tr>
+                                    @endif
+                                @else
+                                    <tr style="font-size:13px ;">
+                                        <td>Đề Tài</td>
+                                        <td colspan=2>Chưa đăng ký đề tài</td>
+                                    </tr>
+                                @endif
+
+
+                        </table>
+                    </div>
+                </div>
+            @else
+                <div class="text-center" style="font-size:18px; padding :10px 0px;">Sinh viên chưa đăng ký giảng viên</div>
+            @endif
+
         </div>
     </div>
 </div>

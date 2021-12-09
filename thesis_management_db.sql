@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2021 at 02:56 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.23
+-- Generation Time: Dec 09, 2021 at 03:42 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,7 +70,16 @@ CREATE TABLE `de_tai` (
 --
 
 INSERT INTO `de_tai` (`dt_id`, `nd_radt_id`, `dt_ma`, `dt_ten`, `dt_mota`) VALUES
-(1, 3, 'DT001', 'Quản lýđăng ký và thực hiện luận văn', 'Đề tài được giảng viên ra , sinh viên có thể đăng ký trong đề tài đó');
+(1, 100, 'DT0012', 'Quản lýđăng ký và thực hiện luận văn 2', '<p>fdsfdsfhskfdjsfkdsffdsfsff</p>'),
+(2, 100, 'De1', 'De tai 1', '<p>dsfhjskfhsdjkf</p>'),
+(3, 100, 'DT0012', 'De tai 2', '<p>fdsfdsf</p>'),
+(4, 100, 'fdsfs', 'dfsfsfsfdsfd', NULL),
+(5, 100, 'DT0012', 'Detai1', '<p>fdsfdsfsdfsfsf</p>'),
+(6, 100, 'DT0012', 'fdsfs', NULL),
+(7, 100, 'fdsfdsf', 'dfsfsfs', '<p>dfsfsf</p>'),
+(8, 100, 'fdsfds', 'fdsfs', '<p>dfsfsdfsdf</p>'),
+(9, 100, 'DT0012', 'De tai test 1', '<p>Abcdfsjfkahfkdjhfdkahfdjkkashf</p>'),
+(10, 100, 'DT2', 'De tai test 2', '<p>dfsfdsffsf</p>');
 
 -- --------------------------------------------------------
 
@@ -87,6 +96,13 @@ CREATE TABLE `dk_de_tai` (
   `dkdt_tongdiem` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `dk_de_tai`
+--
+
+INSERT INTO `dk_de_tai` (`dkdt_id`, `nd_dkdt_id`, `dt_id`, `hknk_id`, `dkdt_thgiandk`, `dkdt_tongdiem`) VALUES
+(7, 101, 10, 10, '2021-12-09 14:42:11', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -99,6 +115,13 @@ CREATE TABLE `dk_giangvien` (
   `hknk_id` bigint(20) NOT NULL,
   `dkgv_thgiandk` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `dk_giangvien`
+--
+
+INSERT INTO `dk_giangvien` (`nd_sv_id`, `nd_gv_id`, `hknk_id`, `dkgv_thgiandk`) VALUES
+(101, 100, 10, '2021-12-09 14:42:04');
 
 -- --------------------------------------------------------
 
@@ -116,7 +139,9 @@ CREATE TABLE `ds_de_tai` (
 --
 
 INSERT INTO `ds_de_tai` (`hknk_id`, `dt_id`) VALUES
-(8, 1);
+(8, 1),
+(10, 9),
+(10, 10);
 
 -- --------------------------------------------------------
 
@@ -127,24 +152,26 @@ INSERT INTO `ds_de_tai` (`hknk_id`, `dt_id`) VALUES
 CREATE TABLE `hocky_nienkhoa` (
   `hknk_id` bigint(20) NOT NULL,
   `hknk_ma` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `hknk_ten` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL
+  `hknk_ten` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `hknk_batdau` date DEFAULT NULL,
+  `hknk_ketthuc` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hocky_nienkhoa`
 --
 
-INSERT INTO `hocky_nienkhoa` (`hknk_id`, `hknk_ma`, `hknk_ten`) VALUES
-(2, 'HK1 2017-2018', 'Học kỳ 1 năm 2017-2018'),
-(3, 'HK2 2017-2018', 'Học kỳ 2 năm 2017-2018'),
-(4, 'HK1 2018-2019', 'Học kỳ 1 năm 2018-2019'),
-(5, 'HK2 2018-2019', 'Học kỳ 2 năm 2018-2019'),
-(6, 'HK1 2019-2020', 'Học kỳ 1 năm 2019-2020'),
-(7, 'HK2 2019-2020', 'Học kỳ 2 năm 2019-2020'),
-(8, 'HK1 2020-2021', 'Học kỳ 1 năm 2020-2021'),
-(9, 'HK2 2020-2021', 'Học kỳ 2 năm 2020-2021'),
-(10, 'HK1 2021-2022', 'Học kỳ 1 năm 2021-2022'),
-(11, 'HK2 2021-2022', 'Học kỳ 2 năm 2021-2022');
+INSERT INTO `hocky_nienkhoa` (`hknk_id`, `hknk_ma`, `hknk_ten`, `hknk_batdau`, `hknk_ketthuc`) VALUES
+(2, 'HK1 2017-2018', 'Học kỳ 1 năm 2017-2018', NULL, NULL),
+(3, 'HK2 2017-2018', 'Học kỳ 2 năm 2017-2018', NULL, NULL),
+(4, 'HK1 2018-2019', 'Học kỳ 1 năm 2018-2019', NULL, NULL),
+(5, 'HK2 2018-2019', 'Học kỳ 2 năm 2018-2019', NULL, NULL),
+(6, 'HK1 2019-2020', 'Học kỳ 1 năm 2019-2020', NULL, NULL),
+(7, 'HK2 2019-2020', 'Học kỳ 2 năm 2019-2020', NULL, NULL),
+(8, 'HK1 2020-2021', 'Học kỳ 1 năm 2020-2021', NULL, NULL),
+(9, 'HK2 2020-2021', 'Học kỳ 2 năm 2020-2021', NULL, NULL),
+(10, 'HK1 2021-2022', 'Học kỳ 1 năm 2021-2022', '2021-08-01', '2021-12-31'),
+(11, 'HK2 2021-2022', 'Học kỳ 2 năm 2021-2022', '2022-01-01', '2022-05-31');
 
 -- --------------------------------------------------------
 
@@ -383,7 +410,10 @@ CREATE TABLE `nguoi_dung` (
 INSERT INTO `nguoi_dung` (`nd_id`, `vt_id`, `td_id`, `bm_id`, `l_id`, `nd_ma`, `nd_ten`, `nd_ngaysinh`, `nd_gioitinh`, `nd_sdt`, `nd_email`, `nd_tentk`, `nd_password`) VALUES
 (3, 2, 1, 1, NULL, 'GV001', 'Lâm Nhựt Khang', '1982-09-09', 'Nữ', '0812365478', 'lnkhang@ctu.edu.vn', 'ND001', '$2y$10$DEpiPmtQr/oYgwAU.3PiQuGEEiWKqfdW.qwoiKmRCeiXOtWwMj.bq'),
 (4, 1, 1, 1, NULL, 'A01', 'Admin', '1990-10-26', 'Nữ', '0814725856', 'admin@ctu.edu.vn', 'ND01', 'admin@a01'),
-(5, 3, 4, 1, NULL, 'B1706537', 'Nguyễn Thị Minh Thư', '1999-10-26', 'Nữ', '0774393564', 'thub106537@ctu.edu.vn', 'B1706537', 'ntmthu@b1706537');
+(5, 3, 4, 1, NULL, 'B1706537', 'Nguyễn Thị Minh Thư', '1999-10-26', 'Nữ', '0774393564', 'thub106537@ctu.edu.vn', 'B1706537', 'ntmthu@b1706537'),
+(100, 2, 1, 1, 180, 'GV003', 'Giang Vien', '2021-12-15', 'Nam', '0123456789', 'abc@gmail.com', 'giangvien', 'minhthu2610'),
+(101, 3, 1, 1, 180, 'SV003', 'Sinh Vien', '2021-12-14', 'Nam', '0123456789', 'abc@gmail.com', 'sinhvien', 'minhthu2610'),
+(2610, 1, 1, 1, 180, 'ADMIN', 'NVD', '2021-12-08', 'Nam', '0123456789', 'abc@gmail.com', 'ndong1999', 'minhthu2610');
 
 -- --------------------------------------------------------
 
@@ -667,13 +697,13 @@ ALTER TABLE `bo_mon`
 -- AUTO_INCREMENT for table `de_tai`
 --
 ALTER TABLE `de_tai`
-  MODIFY `dt_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `dt_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `dk_de_tai`
 --
 ALTER TABLE `dk_de_tai`
-  MODIFY `dkdt_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `dkdt_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `hocky_nienkhoa`
@@ -715,7 +745,7 @@ ALTER TABLE `nganh_hoc`
 -- AUTO_INCREMENT for table `nguoi_dung`
 --
 ALTER TABLE `nguoi_dung`
-  MODIFY `nd_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `nd_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2611;
 
 --
 -- AUTO_INCREMENT for table `phong_hoc`

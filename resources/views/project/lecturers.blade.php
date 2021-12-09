@@ -98,7 +98,7 @@
                     </td>
                     <td>
                         <div align="center">
-                            <span >Cập nhật đề tài </span>
+                            <span>Danh sách đề tài</span>
                         </div>
                     </td>
                 </tr>
@@ -131,36 +131,6 @@
                         </div>
                     </td>
                 </tr>
-
-                <tr>
-                    <td >
-                        <div align="center">
-                            <a href="#">
-                                <img src="/images/icon-people.png" style="width:50px ; height:50px; border-radius: 15px; border:1px solid #04AA6D ;" >
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div align="center">
-                            <a href="/dkluanvan">
-                                <img src="/images/icon-register.png" style="width:50px ; height:50px; border-radius: 15px;" >
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <div align="center">
-                            <span>Giảng viên hướng dẫn</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div align="center">
-                            <span >Cập nhật đề tài </span>
-                        </div>
-                    </td>
-                </tr>
-
 
                 <tr style="font-size:13px ;">
 
