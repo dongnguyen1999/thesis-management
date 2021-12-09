@@ -13,38 +13,37 @@
     <div class="row " style="width:100%; height:600px; margin-bootom:10px;margin-left:20px; ">
         <div class="col-md-6 thongtin"  style=" border:1px solid #04AA6D;border-radius: 25px; padding-top:10px; " >
             <table class="table table-striped thongtingianvien"  style="border: 1px solid white;" >
+
                 <tr  >
                     <td style="text-align:center; font-size:25px;" colspan=2 >THÔNG TIN GIẢNG VIÊN</td>
 
                 </tr>
                 <tr>
                     <td>Mã CB</td>
-                    <td></td>
+                    <td>{{ $user->nd_ma }}</td>
 
                 </tr>
                 <tr>
                     <td>Họ tên</td>
-                    <td></td>
+                    <td>{{ $user->nd_ten }}</td>
 
                 </tr>
                 <tr>
                     <td>Ngày sinh </td>
-                    <td></td>
+                    <td>{{ date('d/m/Y', strtotime($user->nd_ngaysinh)) }}</td>
 
                 </tr>
                 <tr>
                     <td>Giới tính</td>
-                    <td></td>
-
+                    <td>{{ $user->nd_gioitinh }}</td>
                 </tr>
                 <tr>
                     <td>Trình độ</td>
-                    <td></td>
-
+                    <td>{{ $user->trinh_do->td_ten }}</td>
                 </tr>
                 <tr>
                     <td>Bộ môn</td>
-                    <td></td>
+                    <td>{{ $user->bo_mon->bm_ten }}</td>
                 </tr>
                 {{-- <tr>
                     <td>khóa học</td>
@@ -53,17 +52,17 @@
                 </tr> --}}
                 <tr>
                     <td>Khoa</td>
-                    <td></td>
+                    <td>Công nghệ thông tin và truyền thông</td>
 
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td></td>
+                    <td>{{ $user->nd_email }}</td>
 
                 </tr>
                 <tr>
                     <td>Số điện thoại</td>
-                    <td></td>
+                    <td>{{ $user->nd_sdt }}</td>
 
                 </tr>
                 <tr>
@@ -78,7 +77,7 @@
                 <tr>
                     <td >
                         <div align="center">
-                            <a href="/dssinhviendangky">
+                            <a href="/lecturers/dssinhviendangky">
                                 <img src="/images/icon-people.png" style="width:50px ; height:50px; border-radius: 15px; border:1px solid #04AA6D ;" >
                             </a>
                         </div>

@@ -1,5 +1,5 @@
 /* primary color: rgb(7, 110, 29); */
-
+/* danger color: #dc3545 */
 
 body {
     overflow-x: hidden;
@@ -180,11 +180,29 @@ main {
 }
 
 .btn-success {
-    background-color: rgb(7, 110, 29) !important;
+  background-color: rgb(7, 110, 29) !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important
+}
+
+.text-success {
+  color: rgb(7, 110, 29) !important;
+}
+
+.text-danger {
+  color: #dc3545 !important
 }
 
 .bg-success {
     background-color: rgb(7, 110, 29) !important;
+}
+
+.icon-button-sm {
+  font-size: 18px;
+  cursor: pointer;
+  margin: 5px;
 }
 
 /* .form-outline .form-control:focus~.form-label {
@@ -218,3 +236,41 @@ main {
 .form-outline .form-control:focus~.form-label {
     color: rgb(7, 110, 29);
 }
+
+/* table style */
+
+
+table.table-hover tr td{
+  padding:4px;
+  margin-top: 10px;
+  border: 1px solid black;
+  
+}
+table.table-hover tr:hover {
+  background-color: #d4e7dc;
+  
+}
+table.table-hover tr td.tensv {
+  width: 200px;
+      
+}
+table.table-hover tr td.mssv {
+  width: 130px;
+      
+}
+
+thead th {
+  border: 1px solid black !important;
+  background-color: rgb(7, 110, 29) !important;
+  padding: 10px 20px !important;
+  color: white !important;
+  font-weight: bold !important;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+tbody td {
+  vertical-align: middle !important;
+}
+
+/* end table */

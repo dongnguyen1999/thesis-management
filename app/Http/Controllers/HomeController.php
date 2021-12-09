@@ -27,4 +27,8 @@ class HomeController extends Controller
         return view('project.permissionFail');
     }
 
+    public function notFound() {
+        return view('project.notFound');
+    }
+
 }

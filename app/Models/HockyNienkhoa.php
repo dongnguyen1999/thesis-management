@@ -15,6 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $hknk_id
  * @property string|null $hknk_ma
  * @property string|null $hknk_ten
+ * @property Carbon|null $hknk_batdau
+ * @property Carbon|null $hknk_ketthuc
  * 
  * @property Collection|DkDeTai[] $dk_de_tais
  * @property Collection|DkGiangvien[] $dk_giangviens
@@ -31,7 +33,9 @@ class HockyNienkhoa extends Model
 
 	protected $fillable = [
 		'hknk_ma',
-		'hknk_ten'
+		'hknk_ten',
+		'hknk_batdau',
+		'hknk_ketthuc',
 	];
 
 	public function dk_de_tais()

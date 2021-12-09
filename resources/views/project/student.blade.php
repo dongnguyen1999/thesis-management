@@ -19,47 +19,47 @@
                 </tr>
                 <tr>
                     <td>Mã SV</td>
-                    <td>B1706537</td>
+                    <td>{{ $user->nd_ma }}</td>
                     {{-- <td ></td> --}}
 
                 </tr>
                 <tr>
                     <td>Họ tên</td>
-                    <td >Nguyễn Thị minh Thư</td>
+                    <td>{{ $user->nd_ten }}</td>
 
                 </tr>
                 <tr>
                     <td>Ngày sinh </td>
-                    <td></td>
+                    <td>{{ date('d/m/Y', strtotime($user->nd_ngaysinh)) }}</td>
 
                 </tr>
                 <tr>
                     <td>Giới tính</td>
-                    <td></td>
+                    <td>{{ $user->nd_gioitinh }}</td>
 
                 </tr>
                 <tr>
                     <td>Ngành học</td>
-                    <td></td>
+                    <td>{{ $user->lop_hoc->nganh_hoc->n_ten}}</td>
                 </tr>
                 <tr>
-                    <td>khóa học</td>
-                    <td></td>
+                    <td>Khóa học</td>
+                    <td>{{ $user->lop_hoc->khoa_hoc->kh_ten}}</td>
 
                 </tr>
                 <tr>
                     <td>Khoa</td>
-                    <td></td>
+                    <td>Công nghệ thông tin và truyền thông</td>
 
                 </tr>
                 <tr>
                     <td>Số điện thoại</td>
-                    <td></td>
+                    <td>{{ $user->nd_sdt }}</td>
 
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td></td>
+                    <td>{{ $user->nd_email }}</td>
 
                 </tr>
                 <tr>
@@ -169,32 +169,36 @@
 
 
             </table>
-            <table border=1 class="namethongtinluanvan1" style="width: 430px; height:100px; border: 1px solid rgb(199, 196, 196); " cellspacing="0" cellpadding="">
-                <tr align="center" >
-                    <td colspan=2 style="text-align:center;font-size:15px; padding :10px 0px; ">THÔNG TIN LUẬN VĂN </td>
-
-                </tr>
-                <tr style="font-size:13px ;" >
-                    <td>Mã CB </td>
-                    <td colspan=2> htsfyvuygygavg8v888888vh</td>
-                </tr>
-                <tr style="font-size:13px ;" >
-                    <td>Họ và Tên</td>
-                    <td colspan=2>Nguyễn Trương Trịnh Thịnh </td>
-                </tr>
-                <tr style="font-size:13px ;">
-                    <td>Email </td>
-                    <td colspan=2></td>
-                </tr>
-                <tr  style="font-size:13px ;">
-                    <td>Điện thoại</td>
-                    <td colspan=2>Nguyễn Trương Trịnh Thịnh </td>
-                </tr>
-                <tr style="font-size:13px ;">
-                    <td>Đề Tài</td>
-                    <td colspan=2> Webside đăng ký và thực hiện luận văn khoa CNTT-TT</td>
-                </tr>
-            </table>
+            
+            <div class="text-center" style="font-size:18px; padding :10px 0px;">Sinh viên chưa đăng ký luận văn</div>
+            {{-- <div style="border: 1px solid rgb(199, 196, 196); border-radius: 25px;">
+                <table class="namethongtinluanvan1" cellspacing="0" cellpadding="">
+                    <tr align="center" >
+                        <td colspan=2 style="text-align:center;font-size:15px; padding :10px 0px; ">THÔNG TIN LUẬN VĂN </td>
+                    </tr>
+                    <tr style="font-size:13px ;" >
+                        <td>Mã CB </td>
+                        <td colspan=2> htsfyvuygygavg8v888888vh</td>
+                    </tr>
+                    <tr style="font-size:13px ;" >
+                        <td>Họ và Tên</td>
+                        <td colspan=2>Nguyễn Trương Trịnh Thịnh </td>
+                    </tr>
+                    <tr style="font-size:13px ;">
+                        <td>Email </td>
+                        <td colspan=2></td>
+                    </tr>
+                    <tr  style="font-size:13px ;">
+                        <td>Điện thoại</td>
+                        <td colspan=2>Nguyễn Trương Trịnh Thịnh </td>
+                    </tr>
+                    <tr style="font-size:13px ;">
+                        <td>Đề Tài</td>
+                        <td colspan=2> Webside đăng ký và thực hiện luận văn khoa CNTT-TT</td>
+                    </tr>
+                </table>
+            </div> --}}
+            
         </div>
     </div>
 </div>

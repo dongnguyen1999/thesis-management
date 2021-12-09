@@ -8,9 +8,6 @@
 @endsection
 
 @section('content')
-<style>
-    body {background-color: rgb(241, 252, 240);}
-</style>
 
 <h4 class="title" style=" text-align:center; padding-top : 20px;"> THAY ĐỔI ĐỀ TÀI</h4>
 

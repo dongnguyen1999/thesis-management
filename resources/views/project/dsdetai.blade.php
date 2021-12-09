@@ -11,75 +11,54 @@
 
     <div class="container danhsachdetailuanvan">
         <div class="row">
+            <button type="button" class="btn btn-sm btn-success mt-3 ml-3" style="width: 50px"><a href="/lecturers"><i class="fas fa-arrow-left text-white"></i></a></button>
+        </div>
+        
+        <div class="row">
             <div class="danhsachdetai" style="text-align:center;">
                 <br />
                 <span><b>DANH SÁCH ĐỀ TÀI HƯỚNG DẪN </b></span>
                 <br /><br />
             </div>
-            <form id="formdanhsachdetai">
-                <div class="themdetai">
-                    <a href="/lecturers/dsdetai/themdetai" type="button" id="btn-themdetai" name="btn-themdetai"
-                        class="btn btn-themdsdetai">Thêm đề tài</a>
-                </div>
-                <div style=" margin:20px 40px 0px 0px; border:2px solid #04AA6D; ">
-
-                    <table boder=2 class="table table-hover  table-danhsachdetai">
-
-                        <tr align="center" style=" border-bottom:1px solid black ; ">
-                            <td class="stt">STT</td>
-                            <td >MÃ ĐÊ TÀI </td>
-                            <td >TÊN ĐỀ TÀI </td>
-                            <td >MÔ TẢ CHI TIẾT </td>
-                            <td style="padding-left:450px;" class="">CHỨC NĂNG </td>
-
-                        </tr>
-                        {{-- @foreach ($input as $row)  {{ $row->dt_ten }} --}}
-
-                        <tr>
-                            <td></td>
-                            <td > </td>
-                            <td > </td>
-                            <td > </td>
-                            <td align="right" class="chucnang">
-                                <a href="/lecturers/dsdetai/suadetai"> <button type="button" class="btn btn-chucnang"
-                                        onlink="sua();">Sửa</button></a>
-                                <button type="button" class="btn btn-chucnang" onlink="xoa();">Xóa</button>
-                            </td>
-                        </tr>
-                        {{-- @endforeach --}}
-                        <tr align="center">
-                            <td></td>
-                            <td > </td>
-                            <td > </td>
-                            <td > </td>
-                            <td>
-
-                            </td>
-                        </tr>
-
-                        <tr align="center">
-                            <td></td>
-                            <td></td>
-                            <td > </td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td colspan=2></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td colspan=2></td>
-                            <td></td>
-                        </tr>
-
-                    </table>
-                </form>
-            <div>
         </div>
+
+        <form id="formdanhsachdetai">
+            <div class="themdetai">
+                <a href="/lecturers/dsdetai/themdetai" type="button" id="btn-themdetai" name="btn-themdetai"
+                    class="btn btn-themdsdetai">Thêm đề tài</a>
+            </div>
+
+            <table boder=2 class="table table-hover table-danhsachdetai mt-3">
+                <thead>
+                    <tr align="center" style=" border-bottom:1px solid black ; ">
+                        <th class="stt" style="width: 50px">STT</th>
+                        <th style="width: 150px">MÃ ĐÊ TÀI</th>
+                        <th >TÊN ĐỀ TÀI </th>
+                        <th style="width: 200px">CHỨC NĂNG </th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    @foreach ($dsdetai as $detai) 
+                    <tr>
+                        <td>{{ $loop->index+1 }}</td>
+                        <td>{{ $detai->dt_ma }}</td>
+                        <td>{{ $detai->dt_ten }}</td>
+                        <td align="right" class="chucnang">
+                            <a href="/detai/{{ $detai->dt_id }}">
+                                <i class="fas fa-eye icon-button-sm text-success"></i>
+                            </a>
+                            <a href="/lecturers/dsdetai/suadetai/{{ $detai->dt_id }}">
+                                <i class="fas fa-edit icon-button-sm text-success"></i>
+                            </a>
+                            <i class="fas fa-trash-alt icon-button-sm text-danger"></i>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+                
+            </table>
+        </form>
 
     </div>
 

@@ -7,28 +7,15 @@ use App\Http\Controllers\Controller;
 use App\Models\DeTai;
 class DeTaiController extends Controller
 {
-    // GET: /form/get
-    public function themDetai(Request $request) {
+    public function chitietdetai(Request $request) {
+        $dt_id = $request->route('dt_id'); 
+        
+        if ($dt_id) {
+            $detai = DeTai::find($dt_id);
+            return view('project.chitietdetai')->with('detai', $detai);
+        }
 
-        // get all params
-
-        //print_r($request->all());
-        // $params = $request->all();
-        // $params['dt_ma'];
-        //$params['dt_ten'];
-
-
-        // get 1 param
-        $dt_ma = $_GET['dt_ma'];
-        $dt_ten = $_GET['dt_ten'];
-        // print_r($request->get('firstName')); // get $_GET['firstName']
-        // print_r($request->input('firstName'));
-
-        // return "Hết trầm cảm";
-        // return view('project.dsdetai')->with('params',$params);
-
-        return view('project.dsdetai')->with(['dt_ma'=> $dt_ma,'dt_ten' => $dt_ten]);
-
+        return redirect('/not-found');
     }
-
+    
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\TestFormController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LecturerController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\DetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,12 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');
 Route::get('/logout', [AuthController::class, 'getLogout'])->name('getLogout');
 Route::get('/permission-denied', [HomeController::class, 'permissionFail']);
+Route::get('/not-found', [HomeController::class, 'notFound']);
 Route::get('/hello', [HomeController::class, 'hello'])->middleware('requireStudent');
+
+//detai
+Route::get('/detai/{dt_id}', [DeTaiController::class, 'chitietdetai']);
+
 
 //student
 Route::get('/student', [StudentController::class, 'student']);
@@ -39,8 +45,9 @@ Route::get('/lecturers', [LecturerController::class, 'lecturers']);
 // Route::get('/lecturers/dssinhviendangky', [HomeController::class, 'dssinhviendangky']);
     Route::get('/lecturers/dsdetai', [LecturerController::class, 'dsdetai']);
         Route::get('/lecturers/dsdetai/themdetai', [LecturerController::class, 'themdetai']);
-        Route::get('/lecturers/dsdetai/suadetai', [LecturerController::class, 'suadetai']);
-    Route::get('/dssinhviendangky', [LecturerController::class, 'dssinhviendangky']);
+        Route::post('/lecturers/dsdetai/themdetai', [LecturerController::class, 'xulythemdetai']);
+        Route::get('/lecturers/dsdetai/suadetai/{dt_id}', [LecturerController::class, 'suadetai']);
+    Route::get('/lecturers/dssinhviendangky', [LecturerController::class, 'dssinhviendangky']);
     // Route::get('/lecturers/dssinhviendangky', [HomeController::class, 'dssinhviendangky']);
 
 
@@ -62,6 +69,8 @@ Route::get('/form/get', [TestFormController::class, 'testGet']);
 Route::get('/form', [TestFormController::class, 'formView']);
 // Route::post('/register', [TestFormController::class, 'testPost']);
 Route::get('/formtestthemdetai', [DeTaiController::class, 'themDetai']);
+
+Route::any('{catchall}', [HomeController::class, 'notFound'])->where('catchall', '.*');
 
 // Route::get('/hello', [HomeController::class, 'hello']);
 

@@ -1,6 +1,6 @@
 <!--Footer-->
 
-<footer class="page-footer text-center font-small wow fadeIn" style="margin-left: 250px">
+<footer class="page-footer text-center font-small wow fadeIn">
   <div class="container-fluid">
     <div class="row" style="background-color: #f1f1f1; text-align:center;">
       <div class="col-md-12">

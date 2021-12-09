@@ -10,90 +10,44 @@
 @section('content')
 <div class="container danhsachsinhviendangky">
     <div class="row">
+        <button type="button" class="btn btn-sm btn-success mt-3 ml-3" style="width: 50px"><a href="/lecturers"><i class="fas fa-arrow-left text-white"></i></a></button>
+    </div>
+    
+    <div class="row">
       <div class="danhsachsinhviendangky"  style="text-align:center; " >
         <br/>
         <span><b>DANH SÁCH SINH VIÊN ĐĂNG KÝ ĐỀ TÀI </b></span>
         <br/>
     </div>
-    <div style=" margin:0px 40px 0px 0px;  "  >
+    <div style=" margin:0px 40px 0px 0px;">
+        {{-- {{ $dssinhvien }} --}}
         <form action="" class="danhsachsinhviendangki" method="get">
             <table boder=2 class="table table-hover  table-danhsachsinhvien-detai" style=" margin-top:10px ; "  >
-                <tr align="center"style=" border-bottom:1px solid black ;background-color: #1dc463;  ">
-                    <td  class="stt" ><b>STT</b></td>
-                    <td  class="mssv" >MÃ SINH VIÊN</td>
-                    <td  class="tensv" >TÊN SINH VIÊN</td>
-                    <td  class="sdt">SĐT</td>
-                    <td  class="email" >EMAIL</td>
-                    <td  class="tendetai">TÊN ĐỀ TÀI </td>
-                </tr>
-                <tr align="center"  >
-                    <td>1</td>
-                    <td class="mssv">B1706537</td>
-                    <td  class="tensv" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>0123456789</td>
-                    <td>thuonghjb1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
+                <thead>
+                    <tr align="center">
+                        <th  class="stt" ><b>STT</b></th>
+                        <th  class="mssv" >MÃ SINH VIÊN</th>
+                        <th  class="tensv" >TÊN SINH VIÊN</th>
+                        <th  class="sdt">SĐT</th>
+                        <th  class="email" >EMAIL</th>
+                        <th  class="tendetai">TÊN ĐỀ TÀI </th>
+                    </tr>
+                </thead>
 
-                </tr>
-                <tr align="center"  >
-                    <td>1</td>
-                    <td>B1706537</td>
-                    <td  class="" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>0123456789</td>
-                    <td>thub1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
-
-                </tr>
-
-                </tr>
-                <tr align="center"  >
-                    <td>1</td>
-                    <td>B1706537</td>
-                    <td  class="" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>DI17V7AAAA</td>
-                    <td>thub1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
-
-
-                </tr>
-
-                <tr align="center"  >
-                    <td>1</td>
-                    <td>B1706537</td>
-                    <td  class="" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>0123456789</td>
-                    <td>thub1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
-
-                </tr>
-                    <tr align="center"  >
-                    <td>1</td>
-                    <td>B1706537</td>
-                    <td  class="" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>0123456789</td>
-                    <td>thub1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
-
-                </tr>
-
-                <tr align="center"  >
-                    <td>1</td>
-                    <td>B1706537</td>
-                    <td  class="" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>0123456789</td>
-                    <td>thub1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
-
-                </tr>
-                <tr align="center"  >
-                    <td>1</td>
-                    <td>B1706537</td>
-                    <td  class="" >nGUYỄN THỊ MINH THƯ </td>
-                    <td>0123456789</td>
-                    <td>thub1706537@student.ctu.edu.vn</td>
-                    <td>1Nội dung chi tiet  TS Trịnh Nguyễn Trueoeng Quyen SGGGGGGGGGGGGGGGGGGGGGGGG</td>
-
-                </tr>
+                <tbody>
+                    @foreach ($dssinhvien as $sinhvien)
+                        <tr align="center"  >
+                            <td>{{ $loop->index+1 }}</td>
+                            <td class="mssv">{{ $sinhvien->nd_ma }}</td>
+                            <td  class="tensv" >{{ $sinhvien->nd_ten }}</td>
+                            <td>{{ $sinhvien->nd_sdt }}</td>
+                            <td>{{ $sinhvien->nd_email }}</td>
+                            <td>{{ isset($sinhvien->de_tai) ? $sinhvien->de_tai->dt_ten : 'Chưa đăng ký đề tài'}}</td>
+                        </tr>
+                    @endforeach
+                    
+                </tbody>
+                
             </table>
         <form>
     <div>

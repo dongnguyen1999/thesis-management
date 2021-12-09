@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <section class="vh-100 bg-light">
+    <section class="bg-light" style="height: calc(100vh - 77px);">
         <div class="container py-5 h-100 " style="150px;padding-left:150px; padding-right:150px;">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col col-xl-10">
