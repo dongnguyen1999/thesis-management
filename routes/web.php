@@ -21,14 +21,14 @@ use App\Http\Controllers\StudentController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/hello', [HomeController::class, 'hello'])->middleware('requireLogin');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
-Route::post('/postLogin', [AuthController::class, 'postLogin'])->name('postLogin');
-// Route::post('/postLogout', [AuthController::class, 'postLogout'])->name('postLogout');
-Route::get('/logout', [AuthController::class, 'postLogout'])->name('postLogout');
+Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');
+Route::get('/logout', [AuthController::class, 'getLogout'])->name('getLogout');
+Route::get('/permission-denied', [HomeController::class, 'permissionFail']);
+Route::get('/hello', [HomeController::class, 'hello'])->middleware('requireStudent');
 
 //student
-Route::get('/student', [StudentController::class, 'student'])->middleware('requireLogin');
+Route::get('/student', [StudentController::class, 'student']);
     Route::get('/student/dkluanvan', [StudentController::class, 'dkluanvan']);
         Route::get('/student/dkluanvan/dkdetai/{nd_id}', [StudentController::class, 'dkdetai'])->name('student.dkluanvan.dkdetai');
     // Route::get('/student/dkluanvan', [HomeController::class, 'dkluanvan']);

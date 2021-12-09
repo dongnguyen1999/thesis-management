@@ -17,7 +17,6 @@
 
   <main style=" margin-left:260px;">
       @yield('content')
-
   </main>
 
   

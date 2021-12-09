@@ -147,9 +147,36 @@ body {
      /* color:white; */
 }
 
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 250px);
+}
+
+main {
+    margin-bottom: 76px;
+}
+
+.permission-fail-message {
+  color: black;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.nav-btn-container {
+  display: flex;
+  align-items: center;
+}
+
 .nav-title {
     font-size: 18px;
     font-weight: bold;
+}
+
+.welcome-message {
+  font-size: 18px;
+  margin-right: 15px;
 }
 
 .btn-success {

@@ -142,46 +142,41 @@
                         Giới thiệu
                     </a>
                 </li>
-                <li class="{{ Str::startsWith(Request::path(), 'student') ? 'active' : '' }}">
+
+                @if (isset($role) && in_array($role, array('ADMIN', 'SINH_VIEN')))
+                  <li class="{{ Str::startsWith(Request::path(), 'student') ? 'active' : '' }}">
                     <a href="/student">
                         <i class="zmdi zmdi-widgets"></i> Quản lý sinh viên
                     </a>
-                </li>
+                  </li>  
+                @endif
 
-
-
-                <li class="{{ Str::startsWith(Request::path(), 'lecturers') ? 'active' : '' }}">
+                @if (isset($role) && in_array($role, array('ADMIN', 'GIANG_VIEN')))
+                  <li class="{{ Str::startsWith(Request::path(), 'lecturers') ? 'active' : '' }}">
                     <a href="/lecturers">
                         <i class="zmdi zmdi-widgets"></i> Quản lý giảng viên
                     </a>
-                </li>
+                  </li>
+                @endif
+
                 <li class="{{ Request::path() == '' ? 'active' : '' }}">
                     <a href="#">
                         Quản lý danh mục
                     </a>
                 </li>
+
                 <li class="{{ Request::path() == '' ? 'active' : '' }}">
-                    <a href="#">
-                        About
-                    </a>
+                  <a href="#">
+                      About
+                  </a>
+
+                </li>
             </ul>
         </div>
-        <!-- Content -->
-        <div id="content">
-            <nav class="navbar navbar-default-login">
-                <div class="container-fluid d-flex justify-content-between">
-                    <div class="nav-title">
-                        {{ Request::path() == '/' ? 'Giới thiệu' : '' }}
-                        {{ Str::startsWith(Request::path(), 'student') ? 'Quản lý sinh viên' : '' }}
-                        {{ Str::startsWith(Request::path(), 'lecturers') ? 'Quản lý giảng viên' : '' }}
-                    </div>
-                    <div class="nav-btn-container">
-                        <a href="/login"> <button type="button" class="btn btn-success">Đăng nhập</button></a>
-                    </div>
-                </div>
-            </nav>
+        
+        @include('components.header')
 
-        </div>
+
     </div>
 
 </header>

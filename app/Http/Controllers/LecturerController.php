@@ -6,6 +6,18 @@ use Illuminate\Http\Request;
 
 class LecturerController extends Controller
 {
+
+    /**
+     * Instantiate a new UserController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('requireLogin');
+        $this->middleware('requireLecturer');
+    }
+
     public function lecturers() {
         return view('project.lecturers');
     }

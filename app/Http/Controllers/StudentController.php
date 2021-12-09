@@ -13,10 +13,11 @@ class StudentController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('requireLogin');
-    // }
+    public function __construct()
+    {
+        $this->middleware('requireLogin');
+        $this->middleware('requireStudent');
+    }
 
     public function student() {
         return view('project.student');

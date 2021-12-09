@@ -32,12 +32,11 @@
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
 
-                                <form id="loginForm" action="{{ route('postLogin') }}" method="post">
+                                <form id="loginForm" action="/login" method="post">
 
                                     @csrf
                                     <h5 class="fw-normal mb-3 pb-3"
-                                        style="letter-spacing: 1px; text-align:center; font-size:25px;">Thông tin đăng
-                                        nhập </h5>
+                                        style="letter-spacing: 1px; text-align:center; font-size:25px;">Thông tin đăng nhập</h5>
 
                                     <div class="form-outline mb-4">
                                         <input type="text" id="nd_tentk" name="nd_tentk"

@@ -23,4 +23,8 @@ class HomeController extends Controller
         return 'hello';
     }
 
+    public function permissionFail() {
+        return view('project.permissionFail');
+    }
+
 }
